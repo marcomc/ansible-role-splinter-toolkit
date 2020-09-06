@@ -20,7 +20,3 @@
   when:
     - current_user_profile_picture is defined
     - current_user_profile_picture != ''
-    
-- include_tasks: ansible/tasks/extra-packages.yml
-  when: configure_extra_packages
-  tags: ['extra-packages']
