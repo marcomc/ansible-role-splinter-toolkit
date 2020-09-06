@@ -1,0 +1,11 @@
+---
+- name: Detecting the profile chosen profile
+  set_fact:
+    profile: "{{ env_profile if env_profile != '' else setup_profile }}"
+    profile_default: "{{ setup_profile_base if setup_profile_base != '' else 'default' }}"
+
+- name: "Loading profile settings: {{ profile if profile !='' else 'default'}}"
+  include_vars: "{{ item }}"
+  with_fileglob:
+    - "{{ playbook_dir }}/profiles/{{ profile_default }}/*.yml"
+    - "{{ playbook_dir }}/profiles/{{ profile }}/*.yml"
