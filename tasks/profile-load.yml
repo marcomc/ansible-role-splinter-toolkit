@@ -4,7 +4,7 @@
     profile: "{{ env_profile if env_profile | length > 0 else setup_profile }}"
     profile_default: "{{ setup_profile_base if setup_profile_base | length > 0 else 'default' }}"
 
-- name: "Loading profile settings: {{ profile if profile !='' else 'default'}}"
+- name: "Loading profile settings: {{ profile if profile | length > 0 else 'default' }}"
   include_vars: "{{ item }}"
   with_fileglob:
     - "{{ playbook_dir }}/profiles/{{ profile_default }}/*.yml"
