@@ -19,4 +19,4 @@
     new_user_username: "{{ ansible_user_id }}"
   when:
     - current_user_profile_picture is defined
-    - current_user_profile_picture != ''
+    - current_user_profile_picture | length > 0
