@@ -1,6 +1,4 @@
 ---
-downloads: ~/.ansible-downloads/ # the directory used by ansible to download any stuff
-
 configure_filevault:          no # Activate FileVault2, fine tuning in filevault_options.yml
 configure_sophos_endpoint:    no # Install Sophos Endpoint from your organisation
 configure_homebrew:           no # Install and Configure homebrew to be used by all accounts
@@ -11,5 +9,3 @@ configure_setapp:             no # Install SetApp application store and launch i
 install_mas_apps:             no # Install apps from Mac App Store
 install_macos_apps:           no # Install apps from direct links
                                  # apps not available in Mac App Store or as a Homebrew Cask)
-
-post_provision_tasks: []         # Glob pattern to ansible task files to run after all other tasks are finished.
