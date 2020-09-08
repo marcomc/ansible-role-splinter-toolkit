@@ -26,7 +26,7 @@ homebrew_taps:
 homebrew_installed_packages_list_file: files/lists/homebrew_packages.txt
 homebrew_installed_packages: []
 # This list is complemented by {{homebrew_packages_list_file}}
-  # - ansible # is Installed via Pip.
+  # - ansible # is Installed via PIP.
   # - bash-completion
   # - gnu-tar
   # - mas
