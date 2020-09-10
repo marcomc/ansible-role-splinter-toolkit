@@ -1,0 +1,6 @@
+---
+- name: Set default values if not set
+  set_fact:
+    target_user_id: "{{ new_user_username if new_user_username|length > 0 else ansible_user_id }}"
+    new_user_password_cleartext: "{{ new_user_password_cleartext if new_user_password_cleartext|length > 0 else 'password' }}"
+    create_new_user: "{{ create_new_user|default('maybe') }}"
