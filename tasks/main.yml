@@ -1,7 +1,5 @@
 ---
 - block:
-  - include: "load-env-values.yml"
-  - include: "load-default-values.yml"
   - include: "load-profiles.yml"
   - include: "passwordless-sudo.yml passwordless_sudo=yes"
   - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=no"
