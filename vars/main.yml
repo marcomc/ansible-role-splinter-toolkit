@@ -1,3 +1,0 @@
----
-env_profile: "{{ lookup('env','ANSIBLE_SETUP_PROFILE') }}"
-# Instruct ansible to use python from the pyenv enabled via the splinter.sh script
