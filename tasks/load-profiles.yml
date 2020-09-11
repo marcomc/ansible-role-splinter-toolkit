@@ -1,8 +1,8 @@
 ---
 - name: Detecting the profile chosen profile
   set_fact:
-    profile: "{{ env_profile if env_profile | length > 0 else setup_profile }}"
-    profile_default: "{{ setup_profile_base if setup_profile_base | length > 0 else 'default' }}"
+    profile: "{{ env_profile if env_profile | length > 0 else role_profile }}"
+    profile_default: "{{ role_profile_base if role_profile_base | length > 0 else 'default' }}"
 
 - name: "Loading profile settings: {{ profile if profile | length > 0 else 'default' }}"
   include_vars: "{{ item }}"
