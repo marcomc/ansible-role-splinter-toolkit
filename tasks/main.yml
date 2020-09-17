@@ -8,7 +8,7 @@
   when: install_macos_apps
   tags: ['extra-packages','non_mas']
 
-- name: Change profile picture for current user (if it is not the target)
+- name: Change profile picture for '{{ ansible_user_id }}'
   include_role:
     name: marcomc.macos-new-user
     tasks_from: configure-profile-picture
