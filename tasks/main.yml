@@ -10,7 +10,7 @@
 
 - name: Change profile picture for '{{ ansible_user_id }}'
   include_role:
-    name: marcomc.macos-new-user
+    name: marcomc.macos_new_user
     tasks_from: configure-profile-picture
   vars:
     new_user_profile_picture_path: "{{ current_user_profile_picture }}"

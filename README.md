@@ -7,4 +7,4 @@
 
 ## Soft Requirements
 
-    marcomc.macos-new-user
+    marcomc.macos_new_user
