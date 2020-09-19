@@ -22,4 +22,5 @@
   #   ignore_errors: yes
   # end block
   when: apps_quarantine_enabled is defined
+  changed_when: no
   become: yes
