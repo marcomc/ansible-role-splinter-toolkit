@@ -2,6 +2,7 @@ galaxy_info:
   author: Marco Massari Calderone <marco@marcomc.com>
   description: Ansible role that provide the toolkit bult for Splinter, macOS setup automated with Ansible
   license: MIT
+  role_name: splinter_toolkit
   min_ansible_version: 2
   platforms:
     - name: GenericLinux
