@@ -2,3 +2,6 @@
 - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=yes"
   when: configure_homebrew or install_macos_apps
   tags: ['homebrew','non_mas']
+
+- include: "passwordless-sudo.yml passwordless_sudo=no"
+  tags: ['always']
