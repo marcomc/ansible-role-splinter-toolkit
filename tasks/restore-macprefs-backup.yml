@@ -1,0 +1,18 @@
+---
+- name: Look for Macprefs backup dir '{{ macprefs_local_backup_dir }}'.
+  stat:
+    path: "{{ macprefs_local_backup_dir | mandatory }}"
+  register: macprefs_local_backup
+
+- name: Run Macprefs restore if MacPref Backup dir '{{ macprefs_local_backup_dir }}' is present.
+  shell: "{{ item }}"
+  loop:
+    - "{{ macprefs_local_installation}}/macprefs -v restore > {{ macprefs_local_log }} 2>&1"
+  environment:
+    MACPREFS_BACKUP_DIR: "{{ macprefs_local_backup_dir }}"
+  register: macprefs_restore
+  ignore_errors: yes
+  when:
+  - macprefs_local_backup.stat.isdir is defined
+  - macprefs_local_backup.stat.isdir
+  changed_when: false

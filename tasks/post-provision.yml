@@ -1,6 +1,10 @@
 ---
+- include: "restore-macprefs-backup.yml"
+  when: restore_dotfiles_with_macprefs|bool
+  tags: ['dotfiles']
+
 - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=yes"
-  when: configure_homebrew or install_macos_apps
+  when: configure_homebrew|bool or install_macos_apps|bool
   tags: ['homebrew','non_mas']
 
 - include: "passwordless-sudo.yml passwordless_sudo=no"
