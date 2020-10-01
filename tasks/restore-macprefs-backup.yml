@@ -5,14 +5,14 @@
   register: macprefs_local_backup
 
 - name: Run Macprefs restore if MacPref Backup dir '{{ macprefs_local_backup_dir }}' is present.
-  shell: "{{ item }}"
+  shell: "{{ item }} 2>&1"
   loop:
-    - "{{ macprefs_local_installation}}/macprefs -v restore > {{ macprefs_local_log }} 2>&1"
+    - "{{ macprefs_local_installation }}/macprefs -v restore > {{ macprefs_local_log }}"
   environment:
     MACPREFS_BACKUP_DIR: "{{ macprefs_local_backup_dir }}"
   register: macprefs_restore
   ignore_errors: yes
   when:
-  - macprefs_local_backup.stat.isdir is defined
-  - macprefs_local_backup.stat.isdir
+    - macprefs_local_backup.stat.isdir is defined
+    - macprefs_local_backup.stat.isdir
   changed_when: false
