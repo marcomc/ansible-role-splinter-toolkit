@@ -1,5 +1,5 @@
 ---
-- include: "restore-macprefs-backup.yml"
+- include: "restore-preferences-and-dotfiles-export.yml"
   when: restore_preferences_and_dotfiles_from_export|bool
   tags: ['dotfiles']
 
