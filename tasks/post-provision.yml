@@ -1,6 +1,6 @@
 ---
 - include: "restore-macprefs-backup.yml"
-  when: restore_dotfiles_with_macprefs|bool
+  when: restore_preferences_and_dotfiles_from_export|bool
   tags: ['dotfiles']
 
 - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=yes"
