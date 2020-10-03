@@ -13,7 +13,7 @@ DiskImages_Enabled:          "{{ Configure_DiskImages | default('yes') }}" # Ena
 Displays_Enabled:            "{{ Configure_Displays | default('yes') }}" # Enable Displays configuration
 Dock_Enabled:                "{{ Configure_Dock | default('yes') }}" # Enable Dock configuration
 EnergySaver_Enabled:         "{{ Configure_EnergySaver | default('yes') }}" # Enable Energy Saver configuration
-Finder_Enabled:              "{{ Configure_EnergySaver | default('yes') }}" # Enable Finder configuration
+Finder_Enabled:              "{{ Configure_Finder | default('yes') }}" # Enable Finder configuration
 General_Enabled:             "{{ Configure_General | default('yes') }}" # Enable General configuration
 HotCorners_Enabled:          "{{ Configure_HotCorners | default('yes') }}" # Enable Hot Corners configurations
 ICloud_Enabled:              "{{ Configure_iCloud | default('yes') }}" # Enable iCloud configuration
