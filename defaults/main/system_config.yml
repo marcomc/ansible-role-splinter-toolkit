@@ -2,30 +2,30 @@
 mh_computername: "{{ computer_name }}"
 mh_localhostname: "{{ computer_name }}"
 
-ActivityMonitor_Enabled:     yes # Enable ActivityMonitor configuration
-AppStore_Enabled:            yes # Enable AppStore configuration
-ApplicationFirewall_Enabled: yes # Enable Application Firewall
-Bluetooth_Enabled:           yes # Enable Bluetooth configuration
-Dashboard_Enabled:           yes # Enable Dashboard configuration
-DateTime_Enabled:            yes # Enable Date Time configuration
-DesktopScreenSaver_Enabled:  yes # Enable Desktop and Screen Saver configuration
-DiskImages_Enabled:          yes # Enable DiskImages configuration
-Displays_Enabled:            yes # Enable Displays configuration
-Dock_Enabled:                yes # Enable Dock configuration
-EnergySaver_Enabled:         yes # Enable Energy Saver configuration
-Finder_Enabled:              yes # Enable Finder configuration
-General_Enabled:             yes # Enable General configuration
-HotCorners_Enabled:          yes # Enable Hot Corners configurations
-ICloud_Enabled:               no # Enable iCloud configuration
-Keyboard_Enabled:            yes # Enable Keyboard configuration
-LanguageRegion_Enabled:      yes # Enable Language and Region configuration
-LaunchServices_Enabled:      yes # Enable Launch Services configuration
-LoginWindow_Enabled:         yes # Enable Launch Services configuration
-MissionControl_Enabled:      yes # Enable Mission Control configuration
-Safari_Enabled:              yes # Enable Safari configuration
-SetupAssistant_Enabled:      yes # Enable Setup Assitant configuration
-Spotlight_Enabled:           yes # Enable Spotlight configuration
-Trackpad_Enabled:            yes # Enable Trackpad configuration
+ActivityMonitor_Enabled:     "{{ Configure_ActivityMonitor | default('yes') }}" # Enable ActivityMonitor configuration
+AppStore_Enabled:            "{{ Configure_AppStore | default('yes') }}" # Enable AppStore configuration
+ApplicationFirewall_Enabled: "{{ Configure_ApplicationFirewall | default('yes') }}" # Enable Application Firewall
+Bluetooth_Enabled:           "{{ Configure_Bluetooth | default('yes') }}" # Enable Bluetooth configuration
+Dashboard_Enabled:           "{{ Configure_Dashboard | default('yes') }}" # Enable Dashboard configuration
+DateTime_Enabled:            "{{ Configure_DateTime | default('yes') }}" # Enable Date Time configuration
+DesktopScreenSaver_Enabled:  "{{ Configure_DesktopScreenSaver | default('yes') }}" # Enable Desktop and Screen Saver configuration
+DiskImages_Enabled:          "{{ Configure_DiskImages | default('yes') }}" # Enable DiskImages configuration
+Displays_Enabled:            "{{ Configure_Displays | default('yes') }}" # Enable Displays configuration
+Dock_Enabled:                "{{ Configure_Dock | default('yes') }}" # Enable Dock configuration
+EnergySaver_Enabled:         "{{ Configure_EnergySaver | default('yes') }}" # Enable Energy Saver configuration
+Finder_Enabled:              "{{ Configure_EnergySaver | default('yes') }}" # Enable Finder configuration
+General_Enabled:             "{{ Configure_General | default('yes') }}" # Enable General configuration
+HotCorners_Enabled:          "{{ Configure_HotCorners | default('yes') }}" # Enable Hot Corners configurations
+ICloud_Enabled:              "{{ Configure_iCloud | default('yes') }}" # Enable iCloud configuration
+Keyboard_Enabled:            "{{ Configure_Keyboard | default('yes') }}" # Enable Keyboard configuration
+LanguageRegion_Enabled:      "{{ Configure_LanguageRegion | default('yes') }}" # Enable Language and Region configuration
+LaunchServices_Enabled:      "{{ Configure_LaunchServices | default('yes') }}" # Enable Launch Services configuration
+LoginWindow_Enabled:         "{{ Configure_LoginWindow | default('yes') }}" # Enable Launch Services configuration
+MissionControl_Enabled:      "{{ Configure_MissionControl | default('yes') }}" # Enable Mission Control configuration
+Safari_Enabled:              "{{ Configure_Safari | default('yes') }}" # Enable Safari configuration
+SetupAssistant_Enabled:      "{{ Configure_SetupAssistant | default('yes') }}" # Enable Setup Assistant configuration
+Spotlight_Enabled:           "{{ Configure_Spotlight | default('yes') }}" # Enable Spotlight configuration
+Trackpad_Enabled:            "{{ Configure_Trackpad | default('yes') }}" # Enable Trackpad configuration
 
 # when the above configuration toggles are enables then you can fine-tune each services with specific options here below
 
@@ -79,7 +79,7 @@ DateTime_DateFormat: "HH" # Menu bar clock format ("h:mm": Default, "HH": Use a 
 DateTime_FlashDateSeparators: no # Flash the time separators
 DateTime_IsAnalog: no # Analog menu bar clock
 
-DesktopScreenSaver_BackGroundImage: "" # Background iamge
+DesktopScreenSaver_BackGroundImage: "" # Background image
 #/Users/eric/src/github/lafarer/osx-ansible-config/images/toy-story-02.jpg
 DesktopScreenSaver_askForPassword: "Enabled" # Require password after sleep or screen saver begins
 
