@@ -1,6 +1,8 @@
 ---
 - include: "restore-preferences-and-dotfiles-export.yml"
-  when: restore_preferences_and_dotfiles_from_export|bool
+  when:
+    - restore_preferences_and_dotfiles_from_export|bool
+    - target_user_id == ansible_user_id
   tags: ['dotfiles']
 
 - include: "apps-quarantine-toggle.yml apps_quarantine_enabled=yes"
