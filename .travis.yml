@@ -19,7 +19,7 @@ env:
       ANSIBLE_BECOME_PASS: travis
 script:
   - ansible-lint .
-  - ansible-galaxy role install -r requirements.yml -p roles
+  - ansible-galaxy role install -r test/requirements.yml -p test/roles
   - ansible-playbook -i test/inventory test/playbook.yml --syntax-check
   - ansible-playbook -i test/inventory test/playbook.yml --list-tasks
   - ansible-playbook -i test/inventory test/playbook.yml --connection=local -vvvv

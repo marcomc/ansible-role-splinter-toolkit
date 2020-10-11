@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/marcomc/ansible-role-splinter-tools.svg?branch=master)](https://travis-ci.com/marcomc/ansible-role-splinter-tools)
+[![Build Status](https://travis-ci.com/marcomc/ansible-role-splinter-toolkit.svg?branch=master)](https://travis-ci.com/marcomc/ansible-role-splinter-toolkit)
 
 # ansible-role-splinter-toolkit
 Provides foundamenta Ansible tasks for the [Splinter provisioning tool for macOS](https://github.com/marcomc/splinter).
