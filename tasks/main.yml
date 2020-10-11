@@ -6,7 +6,7 @@
 
 - include_tasks: install-gnu-tar.yml
   when: install_macos_apps
-  tags: ['extra-packages','non_mas']
+  tags: ['extra-packages', 'non_mas']
 
 - name: Change profile picture for '{{ ansible_user_id }}'
   include_role:

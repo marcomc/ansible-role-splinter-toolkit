@@ -6,8 +6,8 @@
         - spctl
         - "{{ item.line }}"
     loop:
-      - { enable: 'yes', line: "--master-enable" }
-      - { enable: 'no',  line: "--master-disable" }
+      - {enable: 'yes', line: "--master-enable"}
+      - {enable: 'no', line: "--master-disable"}
     changed_when: no
     when: item.enable|bool == apps_quarantine_enabled|bool
 
