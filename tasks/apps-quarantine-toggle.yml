@@ -19,9 +19,5 @@
       value: "{{ apps_quarantine_enabled }}"
     changed_when: no
 
-  # - name: Apps Quarantine - restart LaunchServices
-  #   command: killall launchservicesd
-  #   ignore_errors: yes
-  # end block
   when: apps_quarantine_enabled is defined
   become: yes
