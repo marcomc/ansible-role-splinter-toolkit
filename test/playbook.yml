@@ -16,5 +16,4 @@
     restore_preferences_and_dotfiles_from_export: yes
 
   roles:
-    - splinter_extra_packages
-...
+    - splinter_toolkit
